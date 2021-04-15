@@ -1,12 +1,12 @@
 <template>
 
-    <div class="bg-rose-500 ">
+    <div class="bg-green-700 ">
 
 
-        <div class="p-4 flex place-items-center space-x-3 text-3xl container mx-auto text-gray-500">
-        <mdi-account />
-        <p class="tracking-wider">
-        Jorge's<span class="font-thin">Notes</span> 
+        <div class="p-4 flex place-items-center space-x-3 text-3xl container mx-auto text-green-300">
+        <mdi-account  class="text-warmGray-50"/>
+        <p class="tracking-wider font-bold">
+        <span class="font font-thin">Jorge's </span> Notes App
         </p>
 
         </div>
