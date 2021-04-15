@@ -1,5 +1,7 @@
 <template>
  <NavBar/>
  <Notes/>
+
+ 
 </template>
 
