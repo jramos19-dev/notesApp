@@ -46,11 +46,12 @@
 </template>
 
 <script setup>
-import { reactive, defineEmit, onMounted } from 'vue'
-import { showToggle, add, noteToEdit, save } from '~/helpers/useNotes'
+import { reactive, defineEmit, onMounted } from "vue"
+import { showToggle, add, noteToEdit, save } from "~/helpers/useNotes"
+
 const newNote = reactive({
-  title: '',
-  content: '',
+  title: "",
+  content: "",
 })
 onMounted(() => {
   if (noteToEdit.value) {
@@ -58,20 +59,20 @@ onMounted(() => {
     newNote.content = noteToEdit.value.content
   }
 })
-const emit = defineEmit(['added', 'saved'])
-const reset = event => {
+const emit = defineEmit(["added", "saved"])
+const reset = (event) => {
   showToggle()
-  newNote.title = ''
-  newNote.content = ''
+  newNote.title = ""
+  newNote.content = ""
   noteToEdit.value = null
   emit(event)
 }
 const addNote = async () => {
   await add(newNote)
-  reset('added')
+  reset("added")
 }
 const saveNote = async () => {
   await save({ id: noteToEdit.value.id, ...newNote })
-  reset('saved')
+  reset("saved")
 }
 </script>
